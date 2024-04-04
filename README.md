@@ -5,6 +5,7 @@ To call a fingerprint value, run
 ```Javascript
 await getFingerprint()
 ```
+Will return a hashed value unique to every device.
 
 
 ### HTML Javascript
