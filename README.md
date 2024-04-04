@@ -1,12 +1,6 @@
 # identifyDOTjs
 Javascript Library to add fingerprinting measures!
 
-
-
-
-
-
-
 To call a fingerprint value, run
 ```Javascript
 await getFingerprint()
