@@ -1,4 +1,4 @@
 # identifyDOTjs
 Javascript Library to add fingerprinting measures!
 
-```adasf```
+```<script src=""></script>```
