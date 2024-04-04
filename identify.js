@@ -4,22 +4,22 @@ function compressObj(n){let t="";for(let o in n)if(n.hasOwnProperty(o)){let r=n[
 async function hash(input) {return (Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',(new TextEncoder()).encode(input)))).map(byte=>byte.toString(16).padStart(2,'0')).join('')).substring(0, 32)};
 function gatherDeviceInfo(){
 	let deviceInfo = {
-	    storage: navigator.storage.estimate(),
-        appCodeName: navigator.appCodeName,
-        platform: navigator.platform,
-        deviceMemory: navigator.deviceMemory,
-        GPU: gpu.wgslLanguageFeatures.size,
-        maxTouchPoints: navigator.maxTouchPoints,
-        doNotTrack: navigator.doNotTrack,
-        browserLanguage: navigator.language,
-        colorDepth: window.screen.colorDepth,
-        CPUCores: navigator.hardwareConcurrency,
-        GPUrenderer: getGPUInfo().renderer,
-        GPUvendor: getGPUInfo().vendor,
-        userAgent: navigator.userAgent,
+		storage: navigator.storage.estimate(),
+        	appCodeName: navigator.appCodeName,
+        	platform: navigator.platform,
+        	deviceMemory: navigator.deviceMemory,
+        	GPU: gpu.wgslLanguageFeatures.size,
+        	maxTouchPoints: navigator.maxTouchPoints,
+        	doNotTrack: navigator.doNotTrack,
+        	browserLanguage: navigator.language,
+        	colorDepth: window.screen.colorDepth,
+        	CPUCores: navigator.hardwareConcurrency,
+        	GPUrenderer: getGPUInfo().renderer,
+        	GPUvendor: getGPUInfo().vendor,
+        	userAgent: navigator.userAgent,
 	};
 	return deviceInfo;
 };
 function getFingerprint(){
-    return (hash(compressObj(gatherCharCode(gatherDeviceInfo()))));
+	return (hash(compressObj(gatherCharCode(gatherDeviceInfo()))));
 }
