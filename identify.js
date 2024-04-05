@@ -5,12 +5,10 @@ async function hash(input) {return (Array.from(new Uint8Array(await crypto.subtl
 function gatherDeviceInfo(){
 	let deviceInfo = {
 		storage: navigator.storage.estimate(),
-        	appCodeName: navigator.appCodeName,
         	platform: navigator.platform,
         	deviceMemory: navigator.deviceMemory,
         	GPU: navigator.gpu.wgslLanguageFeatures.size,
         	maxTouchPoints: navigator.maxTouchPoints,
-        	doNotTrack: navigator.doNotTrack,
         	browserLanguage: navigator.language,
         	colorDepth: window.screen.colorDepth,
         	CPUCores: navigator.hardwareConcurrency,
