@@ -8,7 +8,7 @@ function gatherDeviceInfo(){
         	appCodeName: navigator.appCodeName,
         	platform: navigator.platform,
         	deviceMemory: navigator.deviceMemory,
-        	GPU: gpu.wgslLanguageFeatures.size,
+        	GPU: navigator.gpu.wgslLanguageFeatures.size,
         	maxTouchPoints: navigator.maxTouchPoints,
         	doNotTrack: navigator.doNotTrack,
         	browserLanguage: navigator.language,
