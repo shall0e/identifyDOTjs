@@ -11,12 +11,12 @@ identifyDotJS.gatherDeviceInfo=(function(){
             	maxTouchPoints: navigator.maxTouchPoints,
             	browserLanguage: navigator.language,
             	CPUCores: navigator.hardwareConcurrency,
-            	GPUrenderer: IdentifyDotJS.getGPUInfo().renderer,
-		GPUvendor: IdentifyDotJS.getGPUInfo().vendor,
+            	GPUrenderer: identifyDotJS.getGPUInfo().renderer,
+		GPUvendor: identifyDotJS.getGPUInfo().vendor,
 		userAgent: navigator.userAgent
 	};
 	return deviceInfo;
 });
 identifyDotJS.getFingerprint = async function(){
-	return (IdentifyDotJS.hash(IdentifyDotJS.compressObj(IdentifyDotJS.gatherCharCode(IdentifyDotJS.gatherDeviceInfo()))));
+	return (identifyDotJS.hash(identifyDotJS.compressObj(identifyDotJS.gatherCharCode(identifyDotJS.gatherDeviceInfo()))));
 };
